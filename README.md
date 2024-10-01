@@ -30,7 +30,9 @@ CREATE TABLE staff (
 );
 ```
 
+## CORS
 
+The `next.config.mjs` is used to configure the endpoints so that there are no CORS issues. CORS (Cross-Origin Resource Sharing) issues occur when the frontend and backend are hosted on different origins, and the browser blocks the request due to security policies.  To enable communiation to this repo from one using HTTP calls the `next.config.mjs` has been set up so that any orign can call the endpoints and use HTTP methods of `GET`, `POST`, `PUT`, `PATCH` and `DELETE`.
 
 ## Running
 
