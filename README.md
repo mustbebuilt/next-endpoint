@@ -30,9 +30,12 @@ CREATE TABLE staff (
 );
 ```
 
+> [!IMPORTANT]  
+> The environment variables file `.env.local` has been excluded from this repo so will need to be created to replicate the app.
+
 ## CORS
 
-The `next.config.mjs` is used to configure the endpoints so that there are no CORS issues. CORS (Cross-Origin Resource Sharing) issues occur when the frontend and backend are hosted on different origins, and the browser blocks the request due to security policies.  To enable communiation to this repo from one using HTTP calls the `next.config.mjs` has been set up so that any orign can call the endpoints and use HTTP methods of `GET`, `POST`, `PUT`, `PATCH` and `DELETE`.
+The `next.config.mjs` is used to configure the endpoints so that there are no CORS issues. CORS (Cross-Origin Resource Sharing) issues occur when the frontend and backend are hosted on different origins, and the browser blocks the request due to security policies.  To enable communication to this repo from another using HTTP calls, the `next.config.mjs` has been set up so that any origin can call the endpoints and use HTTP methods of `GET`, `POST`, `PUT`, `PATCH` and `DELETE`.
 
 ## Running
 
