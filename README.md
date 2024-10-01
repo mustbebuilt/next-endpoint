@@ -1,6 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Endpoint
 
-## Getting Started
+This repo demonstrates Next.js 14 [Route Handling](https://nextjs.org/docs/app/building-your-application/routing/route-handlers) with App router.
+
+The repo demonstrates how Route Handlers can be used to create a set of RESTful routes for `GET`, `POST`, `PUT` and `DELETE`.
+
+The routes are all handled by the `localhost/api` endpoint.
+
+This repo is designed to be used in conjunction with the React Vite Single Page Application that is available at [https://github.com/mustbebuilt/vite-spa-endpoint](https://github.com/mustbebuilt/vite-spa-endpoint)
+
+## Set up
+
+This repo was created as a  [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+To run clone the repo and then in terminal run:
+
+```bash
+npm install
+```
+
+It assumes a MySQL database set up with an SQL table of `staff`.
+
+```sql
+CREATE TABLE staff (
+    id SERIAL PRIMARY KEY,       -- Auto-incrementing unique identifier for each staff member
+    name VARCHAR(100) NOT NULL,  -- Name of the staff member
+    email VARCHAR(100) NOT NULL, -- Email of the staff member
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- Timestamp for when the record was created
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP -- Timestamp for the last update
+);
+```
+
+
+
+## Running
 
 First, run the development server:
 
